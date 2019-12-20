@@ -1,9 +1,9 @@
-$fr-color: lightgrey;
+$fr-color: grey;
 $gr-color: #f14b33;
 
 
 body {
-  background-color: #333;
+  //background-color: #333;
   color: lightgrey;
   //font-family: 'Roboto', sans-serif;
   //font-family: 'Open Sans', sans-serif;
@@ -36,7 +36,7 @@ h1 {
   font-size: 40px;
   text-transform: uppercase;
   margin: auto 0;
-  color: yellow;
+  color: #333;
   @media(max-width:500px) and (orientation: portrait){
     font-size: 30px;
     width: 80%;
@@ -91,7 +91,7 @@ h3 {
                       minmax(50px, max-content);
 
   h3 {
-    color: yellow;
+    color: red;
   }
 
 }
@@ -134,7 +134,7 @@ h3 {
 
   .title {
     font-weight: bold;
-    color: yellow;
+    color: white;
   }
 
   .subtitle {
