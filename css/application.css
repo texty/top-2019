@@ -34,8 +34,6 @@ main {
   max-width: 1600px;
   margin: auto;
   min-height: 110vh;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
   grid-template-rows: repeat(4, auto); }
   @media (max-width: 500px) and (orientation: portrait) {
     main {
@@ -62,23 +60,22 @@ h3 {
     color: red; }
 
 .item {
-  grid-column: 1/-2;
   margin-bottom: 50px;
-  width: 90%;
+  width: calc(100% - 50px);
   position: relative;
   cursor: pointer;
   background-size: cover; }
   .item img {
     width: 100%; }
   .item img:hover {
-    filter: invert(0); }
+    filter: grayscale(0); }
   .item p {
     display: none;
     padding: 5px;
     position: absolute;
     top: 25%;
     left: 5%;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 400;
     margin: 0;
     color: #333; }
@@ -93,21 +90,26 @@ h3 {
 
 #fragments {
   padding-inline-start: 0;
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 150px); }
   #fragments h3 {
-    color: lightgrey; }
-  #fragments .item > img {
-    filter: grayscale(100%); }
+    color: lightgrey;
+    margin-bottom: 50px; }
+  #fragments .item {
+    grid-column: span 4; }
+    #fragments .item img {
+      filter: grayscale(100%); }
+    #fragments .item img:hover {
+      filter: grayscale(0); }
   #fragments .empty {
     grid-column: span 1; }
   #fragments .type-one {
     grid-column: span 3;
     grid-row: span 1;
     display: grid;
-    grid-template-columns: 150px 2fr;
+    grid-template-columns: 150px 150px;
     grid-template-rows: max-content;
     margin-bottom: 50px; }
     #fragments .type-one .text {
@@ -161,8 +163,7 @@ h3 {
   #fragments .news .text {
     padding: 5px;
     color: grey;
-    font-weight: 800;
-    width: 70%; }
+    font-weight: 800; }
     #fragments .news .text p {
       margin: 0; }
 
