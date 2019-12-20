@@ -62,8 +62,9 @@ h3 {
     color: red; }
 
 .item {
-  width: 80%;
-  overflow: hidden;
+  grid-column: 1/-2;
+  margin-bottom: 50px;
+  width: 90%;
   position: relative;
   cursor: pointer;
   background-size: cover; }
@@ -83,7 +84,7 @@ h3 {
     color: #333; }
   .item span {
     padding: 2px;
-    background-color: #2b2b2b; }
+    background-color: orange; }
   .item .title {
     color: white; }
   .item .subtitle {
@@ -98,6 +99,8 @@ h3 {
   grid-template-columns: repeat(auto-fit, 150px); }
   #fragments h3 {
     color: lightgrey; }
+  #fragments .item > img {
+    filter: grayscale(100%); }
   #fragments .empty {
     grid-column: span 1; }
   #fragments .type-one {

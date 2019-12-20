@@ -98,8 +98,10 @@ h3 {
 
 
 .item {
-  width: 80%;
-  overflow: hidden;
+  grid-column: 1/-2;
+  margin-bottom: 50px;
+  width: 90%;
+  //overflow: hidden;
   position: relative;
   cursor: pointer;
   //transition: all 1s;
@@ -129,7 +131,7 @@ h3 {
 
   span {
     padding:2px;
-    background-color: #2b2b2b;
+    background-color: orange;
   }
 
   .title {
@@ -164,6 +166,10 @@ h3 {
 
   h3 {
     color: lightgrey;
+  }
+
+  .item > img {
+    filter: grayscale(100%);
   }
 
   .empty {
