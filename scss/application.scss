@@ -1,5 +1,5 @@
-$fr-color: grey;
-$gr-color: orange;
+$fr-color: lightgrey;
+$gr-color: #f14b33;
 
 
 body {
@@ -36,7 +36,7 @@ h1 {
   font-size: 40px;
   text-transform: uppercase;
   margin: auto 0;
-  color: lightgrey;
+  color: yellow;
   @media(max-width:500px) and (orientation: portrait){
     font-size: 30px;
     width: 80%;
@@ -91,7 +91,7 @@ h3 {
                       minmax(50px, max-content);
 
   h3 {
-    color: orange;
+    color: yellow;
   }
 
 }
@@ -134,7 +134,7 @@ h3 {
 
   .title {
     font-weight: bold;
-    color: orange;
+    color: yellow;
   }
 
   .subtitle {
