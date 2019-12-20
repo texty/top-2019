@@ -106,7 +106,7 @@ h3 {
   background-size: cover;
 
   img {
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
 
     width: 100%;
   }
@@ -249,9 +249,9 @@ h3 {
       //transition: all 0.3s;
       //height: 100px;
 
-      //&:hover {
-      //  transform: scale(1.2);
-      //}
+      &:hover {
+        filter: invert(0);
+      }
     }
 
     .text {

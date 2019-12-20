@@ -68,7 +68,6 @@ h3 {
   cursor: pointer;
   background-size: cover; }
   .item img {
-    filter: grayscale(100%);
     width: 100%; }
   .item img:hover {
     filter: invert(0); }
@@ -164,6 +163,8 @@ h3 {
     border: 2px solid grey;
     margin: 0;
     width: 150px; }
+    #fragments .news .picture:hover {
+      filter: invert(0); }
   #fragments .news .text {
     padding: 5px;
     color: grey;
