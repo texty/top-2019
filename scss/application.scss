@@ -21,8 +21,12 @@ article {
   grid-gap: 10px;
   width: 100%;
   max-width: 1400px;
-  margin: auto;
-  @media(max-width: 800px) {
+  margin: auto auto 50px auto;
+  @media(max-width: 600px) {
+    width: 470px;
+    margin: auto;
+  }
+  @media(max-width: 500px) {
     width: 300px;
     margin: auto;
   }
@@ -35,20 +39,29 @@ article {
 
 
   .wrapper {
+    width: max-content;
     margin: auto;
     font-weight: bold;
     text-transform: uppercase;
   }
 
   p {
-    font-size: 17px;
+    font-size: 28px;
     text-align: center;
     margin: 0;
   }
 
+  p:nth-child(1) {
+    letter-spacing: 1px;
+  }
+
   p#year {
-    margin: -5px auto;
-    font-size: 50px;
+    margin: -15px auto;
+    font-size: 90px;
+  }
+
+  img {
+    width: 200px;
   }
 }
 
