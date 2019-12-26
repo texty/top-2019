@@ -85,27 +85,27 @@ main {
   max-width: 1200px;
   margin: auto; }
 
-header {
+#header {
   width: 100%;
   grid-column: span 2;
   grid-row: span 1;
   display: flex; }
-  header .wrapper {
+  #header .wrapper {
     width: max-content;
     margin: auto;
     font-weight: bold;
     text-transform: uppercase; }
-  header p {
+  #header p {
     font-size: 35px;
     text-align: center;
     margin: 0; }
-  header p:nth-child(1) {
+  #header p:nth-child(1) {
     letter-spacing: 1px; }
-  header p#year {
+  #header p#year {
     color: #ed6746;
     margin: -15px auto;
     font-size: 110px; }
-  header img {
+  #header img {
     width: 250px; }
 
 h2 {
@@ -135,6 +135,49 @@ section {
     .empty {
       display: none; } }
 
+.item {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex; }
+  @media (max-width: 960px) {
+    .item {
+      margin: 5px 0;
+      height: 200px; } }
+
+.item:hover {
+  filter: grayscale(0); }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  height: 100%; }
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0); }
+
+.overlay:hover + .title {
+  display: none; }
+
+.title {
+  width: 96%;
+  pointer-events: none;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  margin: auto; }
+  .title h3 {
+    width: 96%;
+    color: white;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 1.4; }
+  .title p {
+    font-size: 20px;
+    line-height: 1.6; }
+
 /* дата-проекти */
 section#dj-projects {
   grid-template-columns: repeat(auto-fill, 250px);
@@ -146,31 +189,6 @@ section#dj-projects {
   @media (max-width: 960px) {
     section#dj-projects {
       display: block; } }
-  section#dj-projects .item {
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    display: flex; }
-    @media (max-width: 960px) {
-      section#dj-projects .item {
-        margin: 5px 0;
-        height: 200px; } }
-  section#dj-projects .item:hover {
-    filter: grayscale(0); }
-  section#dj-projects .overlay {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
-    height: 100%; }
-  section#dj-projects .overlay:hover {
-    background-color: rgba(0, 0, 0, 0); }
-  section#dj-projects .overlay:hover + .title {
-    display: none; }
-  section#dj-projects .colorful {
-    filter: grayscale(0); }
-    section#dj-projects .colorful .overlay {
-      background-color: rgba(0, 0, 0, 0.3); }
   section#dj-projects .item-1 {
     grid-column: span 2;
     grid-row: span 1; }
@@ -183,22 +201,6 @@ section#dj-projects {
   section#dj-projects .item-3 {
     grid-column: span 1;
     grid-row: span 1; }
-  section#dj-projects .title {
-    width: 96%;
-    pointer-events: none;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    margin: auto; }
-    section#dj-projects .title h3 {
-      width: 96%;
-      color: white;
-      margin: 0 auto;
-      font-size: 25px;
-      line-height: 1.4; }
-    section#dj-projects .title p {
-      font-size: 20px;
-      line-height: 1.6; }
 
 /* вибори */
 section#elections {
@@ -212,41 +214,7 @@ section#elections {
       display: block; } }
   section#elections .item {
     grid-column: span 2;
-    grid-row: span 1;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    display: flex; }
-    @media (max-width: 800px) {
-      section#elections .item {
-        margin: 5px 0;
-        height: 200px; } }
-  section#elections .item:hover {
-    filter: grayscale(0); }
-  section#elections .overlay {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
-    height: 100%; }
-  section#elections .overlay:hover {
-    background-color: rgba(0, 0, 0, 0); }
-  section#elections .overlay:hover + .title {
-    display: none; }
-  section#elections .title {
-    width: 96%;
-    pointer-events: none;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    margin: auto; }
-    section#elections .title h3 {
-      width: 96%;
-      color: white;
-      margin: 0 auto;
-      font-size: 25px; }
-    section#elections .title p {
-      font-size: 20px; }
+    grid-row: span 1; }
 
 /* статті */
 section#articles {

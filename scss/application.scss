@@ -2,7 +2,6 @@
 $red: rgb(237, 103, 70);
 
 
-
 body {
   color: #333;
   font-family: 'Roboto', sans-serif;
@@ -49,6 +48,8 @@ body {
   }
 }
 
+
+
 main {
   width: 100%;
   max-width: 1200px;
@@ -56,7 +57,7 @@ main {
 }
 
 
-header {
+#header {
   width: 100%;
   grid-column: span 2;
   grid-row: span 1;
@@ -89,6 +90,7 @@ header {
     width: 250px;
   }
 }
+
 
 h2 {
   width: 100%;
@@ -124,6 +126,59 @@ section {
 }
 
 
+.item {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  @media(max-width: 960px) {
+    margin: 5px 0;
+    height: 200px;
+  }
+}
+
+.item:hover {
+  filter: grayscale(0);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 5;
+  height: 100%;
+}
+
+.overlay:hover {
+  background-color: rgba(0,0,0,0);
+}
+
+.overlay:hover + .title {
+  display: none;
+}
+
+.title {
+  width: 96%;
+  pointer-events: none;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  margin: auto;
+
+  h3 {
+    width: 96%;
+    color: white;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
 
 
 /* дата-проекти */
@@ -137,51 +192,6 @@ section#dj-projects {
   @media(max-width: 960px) {
     display: block;
   }
-
-
-  .item {
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    //filter: grayscale(100%);
-    display: flex;
-    @media(max-width: 960px) {
-      margin: 5px 0;
-      height: 200px;
-    }
-  }
-
-  .item:hover {
-    filter: grayscale(0);
-  }
-
-   .overlay {
-     position: absolute;
-     width: 100%;
-     background-color: rgba(0,0,0,0.6);
-     z-index: 5;
-     height: 100%;
-   }
-
-  .overlay:hover {
-    background-color: rgba(0,0,0,0);
-  }
-
-  .overlay:hover + .title {
-    display: none;
-  }
-
-
-
-  .colorful {
-    filter: grayscale(0);
-
-
-    .overlay {
-      background-color: rgba(0,0,0,0.3);
-    }
-  }
-
 
   .item-1 {
     grid-column: span 2;
@@ -200,30 +210,7 @@ section#dj-projects {
     grid-column: span 1;
     grid-row: span 1;
   }
-
-  .title {
-    width: 96%;
-    pointer-events: none;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    margin: auto;
-
-    h3 {
-      width: 96%;
-      color: white;
-      margin: 0 auto;
-      font-size: 25px;
-      line-height: 1.4;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-    }
-  }
 }
-
 
 
 
@@ -241,56 +228,6 @@ section#elections {
   .item {
     grid-column: span 2;
     grid-row: span 1;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    //filter: grayscale(100%);
-    display: flex;
-    @media(max-width: 800px) {
-      margin: 5px 0;
-      height: 200px;
-    }
-  }
-
-  .item:hover {
-    filter: grayscale(0);
-  }
-
-  .overlay {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 5;
-    height: 100%;
-  }
-
-  .overlay:hover {
-    background-color: rgba(0,0,0,0);
-  }
-
-  .overlay:hover + .title {
-    display: none;
-  }
-
-  .title {
-    width: 96%;
-    pointer-events: none;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    margin: auto;
-
-    h3 {
-      width: 96%;
-      color: white;
-      margin: 0 auto;
-      font-size: 25px;
-      //text-transform: uppercase;
-    }
-
-    p {
-      font-size: 20px;
-    }
   }
 }
 
@@ -322,7 +259,6 @@ section#articles {
     div:hover {
       filter: grayscale(0);
     }
-
 
     p {
       font-size: 18px;
@@ -356,7 +292,6 @@ section#charts {
       margin: 15px auto;
       height: max-content;
     }
-
 
     p {
       color: white;
