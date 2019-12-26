@@ -257,7 +257,7 @@ section#charts {
   @media (max-width: 1000px) {
     section#charts {
       grid-template-columns: repeat(4, 1fr); } }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     section#charts {
       grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 500px) {
@@ -275,22 +275,20 @@ section#charts {
       color: white;
       font-size: 18px;
       font-weight: bold;
-      width: 95%;
+      width: 90%;
       margin: 0;
       line-height: 1.4; }
-      @media (max-width: 800px) {
-        section#charts .chart p {
-          font-size: 15px; } }
     section#charts .chart p span {
       padding: 2px;
       background-color: #676767;
       box-shadow: 5px 0 0 0  #676767, -5px 0 0 0  #676767; }
     section#charts .chart span:hover {
-      background-color: #878787; }
+      background-color: #878787;
+      box-shadow: 5px 0 0 0 #878787, -5px 0 0 0 #878787; }
 
 section#fragments {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     section#fragments {
       grid-template-columns: 1fr 1fr 1fr; } }
   @media (max-width: 650px) {
@@ -305,9 +303,6 @@ section#fragments {
       font-weight: bold;
       width: 80%;
       margin: auto; }
-      @media (max-width: 800px) {
-        section#fragments .fragment p {
-          font-size: 15px; } }
   section#fragments .fragment:nth-child(2n) {
     background-color: rgba(237, 103, 70, 0.7); }
   section#fragments .fragment:hover {

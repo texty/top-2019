@@ -2,7 +2,6 @@
 @import "font";
 
 
-
 $red: rgb(237, 103, 70);
 
 
@@ -281,7 +280,7 @@ section#charts {
   @media(max-width: 1000px){
     grid-template-columns: repeat(4, 1fr);
   }
-  @media(max-width: 800px){
+  @media(max-width: 900px){
     grid-template-columns: repeat(3, 1fr);
   }
   @media(max-width: 500px){
@@ -302,12 +301,9 @@ section#charts {
       color: white;
       font-size: 18px;
       font-weight: bold;
-      width: 95%;
+      width: 90%;
       margin: 0 ;
       line-height: 1.4;
-      @media(max-width: 800px){
-        font-size: 15px;
-      }
     }
 
     p span {
@@ -318,6 +314,7 @@ section#charts {
 
     span:hover {
       background-color: #878787;
+      box-shadow: 5px 0 0 0 #878787, -5px 0 0 0 #878787;
     }
   }
 }
@@ -325,7 +322,7 @@ section#charts {
 
 section#fragments {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  @media(max-width: 800px){
+  @media(max-width: 1000px){
     grid-template-columns: 1fr 1fr 1fr;
   }
   @media(max-width: 650px){
@@ -342,9 +339,6 @@ section#fragments {
       font-weight: bold;
       width: 80%;
       margin: auto;
-      @media(max-width: 800px){
-        font-size: 15px;
-      }
     }
   }
 
