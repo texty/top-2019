@@ -48,9 +48,17 @@
     #support-us {
       font-size: 20px; } }
 
+@font-face {
+  font-family: ProximaNova;
+  font-weight: normal;
+  src: url("../ProximaNova/PROXIMANOVA-REGULAR.OTF") format("opentype"); }
+@font-face {
+  font-family: ProximaNova;
+  font-weight: bold;
+  src: url("../ProximaNova/PROXIMA NOVA BOLD.OTF") format("opentype"); }
 body {
   color: #333;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'ProximaNova', sans-serif; }
 
 #soc {
   display: flex;
@@ -275,7 +283,10 @@ section#charts {
           font-size: 15px; } }
     section#charts .chart p span {
       padding: 2px;
-      background-color: #676767; }
+      background-color: #676767;
+      box-shadow: 5px 0 0 0  #676767, -5px 0 0 0  #676767; }
+    section#charts .chart span:hover {
+      background-color: #878787; }
 
 section#fragments {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
@@ -299,5 +310,7 @@ section#fragments {
           font-size: 15px; } }
   section#fragments .fragment:nth-child(2n) {
     background-color: rgba(237, 103, 70, 0.7); }
+  section#fragments .fragment:hover {
+    box-shadow: 3px 3px 3px #a7a7a7; }
 
 /*# sourceMappingURL=application.css.map */
