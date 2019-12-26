@@ -19,25 +19,10 @@ body {
   right:0;
   top:10px;
 
-  div#translate {
-    display:flex;
-  }
-
   a {
     margin:auto;
     text-decoration: none;
   }
-
-  a span {
-    border-bottom: 1px dashed black;
-    margin-right:20px;
-    font-weight:800;
-    font-size:20px;
-    letter-spacing: 1px;
-    color:black!important;
-    background-color:rgba(225,225,225,0.7);
-  }
-
 
   i {
     font-size:35px;
@@ -50,7 +35,6 @@ body {
     }
   }
 }
-
 
 
 main {
