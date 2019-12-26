@@ -1,7 +1,84 @@
 @charset "UTF-8";
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+#button {
+  width: 50%;
+  /* 100% of parent container*/
+  margin: 100px auto;
+  line-height: 1.6; }
+  @media (max-width: 500px) {
+    #button {
+      width: 90%; } }
+  #button h3 {
+    font-size: 20px !important;
+    font-family: inherit;
+    font-weight: 800;
+    text-align: center; }
+    @media (max-width: 1024px) and (orientation: portrait) {
+      #button h3 {
+        font-size: 20px !important; } }
+    @media (min-width: 1800px) {
+      #button h3 {
+        font-size: 30px; } }
+
+#button-container {
+  width: 100%;
+  display: flex; }
+
+#support-us {
+  width: auto;
+  background-color: #ed6746;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  font-size: 18px;
+  margin: auto;
+  cursor: pointer; }
+  @media (max-width: 1024px) and (orientation: portrait) {
+    #support-us {
+      font-size: 20px !important; } }
+  @media (min-width: 1800px) {
+    #support-us {
+      font-size: 20px; } }
+
 body {
   color: #333;
   font-family: 'Roboto', sans-serif; }
+
+#soc {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  position: fixed;
+  right: 0;
+  top: 10px; }
+  #soc div#translate {
+    display: flex; }
+  #soc a {
+    margin: auto;
+    text-decoration: none; }
+  #soc a span {
+    border-bottom: 1px dashed black;
+    margin-right: 20px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: black !important;
+    background-color: rgba(225, 225, 225, 0.7); }
+  #soc i {
+    font-size: 35px;
+    color: #ed6746;
+    margin: 0 0 0 0.5em;
+    max-height: 1em; }
+    #soc i:hover {
+      color: #ff2c5f; }
 
 main {
   width: 100%;
@@ -10,7 +87,8 @@ main {
 
 header {
   width: 100%;
-  height: 300px;
+  grid-column: span 2;
+  grid-row: span 1;
   display: flex; }
   header .wrapper {
     width: max-content;
@@ -18,7 +96,7 @@ header {
     font-weight: bold;
     text-transform: uppercase; }
   header p {
-    font-size: 28px;
+    font-size: 35px;
     text-align: center;
     margin: 0; }
   header p:nth-child(1) {
@@ -26,9 +104,9 @@ header {
   header p#year {
     color: #ed6746;
     margin: -15px auto;
-    font-size: 90px; }
+    font-size: 110px; }
   header img {
-    width: 200px; }
+    width: 250px; }
 
 h2 {
   width: 100%;
@@ -72,7 +150,6 @@ section#dj-projects {
     background-position: center center;
     background-size: cover;
     position: relative;
-    filter: grayscale(100%);
     display: flex; }
     @media (max-width: 960px) {
       section#dj-projects .item {
@@ -139,7 +216,6 @@ section#elections {
     background-position: center center;
     background-size: cover;
     position: relative;
-    filter: grayscale(100%);
     display: flex; }
     @media (max-width: 800px) {
       section#elections .item {
@@ -225,13 +301,13 @@ section#charts {
       font-weight: bold;
       width: 95%;
       margin: 0;
-      line-height: 1.8; }
+      line-height: 1.4; }
       @media (max-width: 800px) {
         section#charts .chart p {
           font-size: 15px; } }
     section#charts .chart p span {
       padding: 2px;
-      background-color: #444444; }
+      background-color: #676767; }
 
 section#fragments {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
@@ -253,5 +329,7 @@ section#fragments {
       @media (max-width: 800px) {
         section#fragments .fragment p {
           font-size: 15px; } }
+  section#fragments .fragment:nth-child(2n) {
+    background-color: rgba(237, 103, 70, 0.7); }
 
 /*# sourceMappingURL=application.css.map */

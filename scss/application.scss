@@ -1,10 +1,52 @@
-$red: #ed6746;
+@import "donate";
+$red: rgb(237, 103, 70);
 
 
 
 body {
   color: #333;
   font-family: 'Roboto', sans-serif;
+}
+
+
+#soc {
+  display:flex;
+  justify-content: flex-end;
+  margin-right:20px;
+  position:fixed;
+  right:0;
+  top:10px;
+
+  div#translate {
+    display:flex;
+  }
+
+  a {
+    margin:auto;
+    text-decoration: none;
+  }
+
+  a span {
+    border-bottom: 1px dashed black;
+    margin-right:20px;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing: 1px;
+    color:black!important;
+    background-color:rgba(225,225,225,0.7);
+  }
+
+
+  i {
+    font-size:35px;
+    color: $red;
+    margin: 0 0 0 0.5em;
+    max-height: 1em;
+
+    &:hover {
+      color: #ff2c5f;
+    }
+  }
 }
 
 main {
@@ -16,8 +58,8 @@ main {
 
 header {
   width: 100%;
-  //max-width: 450px;
-  height: 300px;
+  grid-column: span 2;
+  grid-row: span 1;
   display: flex;
 
   .wrapper {
@@ -28,7 +70,7 @@ header {
   }
 
   p {
-    font-size: 28px;
+    font-size: 35px;
     text-align: center;
     margin: 0;
   }
@@ -40,11 +82,11 @@ header {
   p#year {
     color: $red;
     margin: -15px auto;
-    font-size: 90px;
+    font-size: 110px;
   }
 
   img {
-    width: 200px;
+    width: 250px;
   }
 }
 
@@ -82,6 +124,8 @@ section {
 }
 
 
+
+
 /* дата-проекти */
 section#dj-projects {
   grid-template-columns: repeat(auto-fill, 250px);
@@ -99,7 +143,7 @@ section#dj-projects {
     background-position: center center;
     background-size: cover;
     position: relative;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
     display: flex;
     @media(max-width: 960px) {
       margin: 5px 0;
@@ -181,6 +225,8 @@ section#dj-projects {
 }
 
 
+
+
 /* вибори */
 section#elections {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -198,7 +244,7 @@ section#elections {
     background-position: center center;
     background-size: cover;
     position: relative;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
     display: flex;
     @media(max-width: 800px) {
       margin: 5px 0;
@@ -250,7 +296,6 @@ section#elections {
 
 
 /* статті */
-
 section#articles {
   grid-template-columns: repeat(4, 1fr);
   @media(max-width: 1000px){
@@ -289,6 +334,8 @@ section#articles {
   }
 }
 
+
+
 section#charts {
   grid-template-columns: repeat(5, 1fr);
   @media(max-width: 1000px){
@@ -317,7 +364,7 @@ section#charts {
       font-weight: bold;
       width: 95%;
       margin: 0 ;
-      line-height: 1.8;
+      line-height: 1.4;
       @media(max-width: 800px){
         font-size: 15px;
       }
@@ -325,7 +372,7 @@ section#charts {
 
     p span {
       padding: 2px;
-      background-color: #444444;
+      background-color: #676767;
     }
   }
 }
@@ -356,6 +403,9 @@ section#fragments {
     }
   }
 
+  .fragment:nth-child(2n) {
+    background-color: rgba(237, 103, 70, 0.7)
+  }
 }
 
 
