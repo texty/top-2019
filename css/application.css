@@ -270,7 +270,6 @@ section#charts {
       margin: 0;
       line-height: 1.4; }
     section#charts .chart p span {
-      padding: 2px;
       background-color: #676767;
       box-shadow: 5px 0 0 0  #676767, -5px 0 0 0  #676767; }
     section#charts .chart span:hover {
