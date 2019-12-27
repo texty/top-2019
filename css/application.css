@@ -244,17 +244,21 @@ section#articles {
           font-size: 15px; } }
 
 section#charts {
-  grid-template-columns: repeat(5, 1fr); }
+  grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 1000px) {
     section#charts {
-      grid-template-columns: repeat(4, 1fr); } }
+      grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px) {
     section#charts {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
     section#charts {
       display: block; } }
   section#charts .chart {
+    width: 70%;
+    margin-bottom: 50px;
+    background: url("../img/grid.png");
+    background-size: cover;
     display: flex;
     height: 200px; }
     @media (max-width: 900px) {
@@ -267,7 +271,7 @@ section#charts {
       font-size: 18px;
       font-weight: bold;
       width: 90%;
-      margin: 0;
+      margin: 25px 0 0 5px;
       line-height: 1.4; }
     section#charts .chart p span {
       background-color: #676767;
