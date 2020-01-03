@@ -105,6 +105,7 @@ main {
     margin: -15px auto;
     font-size: 110px; }
   #header img {
+    cursor: pointer;
     width: 250px; }
 
 h2 {
